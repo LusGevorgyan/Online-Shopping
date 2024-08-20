@@ -11,14 +11,15 @@ import { Buttons } from '@/src/components/global/Buttons'
 import WishlistIcon from '@/src/assets/icons/wishlist.svg'
 import DeleteIcon from '@/src/assets/icons/delete.svg'
 
-export type ListItemProduct = Product & {
+export type ListItemProduct = {
+    productItem: Product,
     isWishList?: boolean
 }
 
-const ProductList: React.FC<ListItemProduct> = products => {
+const ProductList: React.FC<ListItemProduct> = ({ productItem, isWishList }) => {
     const [ isShown, setIsShown ] = useState(false)
     const [ activeCode, setActiveCode ] = useState(0)
-    const [ product, setProduct ] = useState(products)
+    const [ product, setProduct ] = useState(productItem)
     const [ count, setCount ] = useState(1)
     const [ isAddWishList, setIsAddWishList ] = useState(true)
     const { productsInBasket, setProductCount, getProductCount, countBasket } = useCart()
@@ -37,7 +38,7 @@ const ProductList: React.FC<ListItemProduct> = products => {
         }
     }, [getProductCount, isBasket, product])
 
-    const cartProduct = productsInBasket.find(elem => elem.product.productId === products.productId)
+    const cartProduct = productsInBasket.find(elem => elem.product.productId === productItem.productId)
     const addCartProduct = () => {
         if (product) {
             const productCount = getProductCount(product)
@@ -48,7 +49,7 @@ const ProductList: React.FC<ListItemProduct> = products => {
         }
     }
 
-    const wishListProduct = productsInWishList.find((elem: WishListProduct) => elem.product?.productId === products.productId)
+    const wishListProduct = productsInWishList.find((elem: WishListProduct) => elem.product?.productId === productItem.productId)
     const addWishListProduct = () => {
         if (product) {
             const productCount = gettingProductCount(product)
@@ -63,6 +64,7 @@ const ProductList: React.FC<ListItemProduct> = products => {
     return (
         <div className='flex flex-col gap-4 items-start'>
             <div
+                key={product.productId}
                 onMouseEnter={() => setIsShown(true)}
                 onMouseLeave={() => setIsShown(false)}
                 className='bg-[#F5F5F5] relative flex items-center justify-center w-64 h-72'
@@ -96,13 +98,13 @@ const ProductList: React.FC<ListItemProduct> = products => {
                     </div>
                 )}
 
-                {products.isWishList ? (
+                {isWishList ? (
                     <div className='absolute right-3 top-3 flex flex-col gap-2'>
                         <div
                             className='flex items-center rounded-full bg-white cursor-pointer p-1 justify-center'
                             onClick={() => {
-                                console.log(products.productId, '64646544')
-                                deleteFromWishList(products.productId as string, 'all')
+                                console.log(productItem.productId, '64646544')
+                                deleteFromWishList(productItem.productId, 'all')
                             }}
                         >
                             <DeleteIcon stroke='black' fill='white' />
@@ -125,7 +127,7 @@ const ProductList: React.FC<ListItemProduct> = products => {
                 </div>
 
                 {
-                    !products.isWishList && (
+                    !isWishList && (
                         <div className='flex justify-between w-full items-center gap-2'>
                             <RatingList values={product.rating}/>
                             <p className='text-gray-500 font-bold'>({product.count})</p>

@@ -4,7 +4,7 @@ import { StorageKeys } from '@/src/utils/constants/storageKeys'
 
 type ReturnType = {
     productsInWishList: WishListProduct[]
-    deleteFromWishList: (code: string, count?: string | number) => void
+    deleteFromWishList: (code: number, count?: string | number) => void
     setProductsCount: (product: Product, count?: number) => void
     gettingProductCount: (product: Product) => number
     emptyBasket: () => void
@@ -41,7 +41,7 @@ const useWishList = (): ReturnType => {
         }
     }
 
-    const deleteFromWishList = (productNumberId: string, count: number | string = 1) => {
+    const deleteFromWishList = (productNumberId: number, count: number | string = 1) => {
         const newList = productsInWishList.reduce((list: WishListProduct[], product) => {
             if (product.product.productId !== productNumberId) {
                 list.push(product)

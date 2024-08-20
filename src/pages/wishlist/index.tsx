@@ -25,7 +25,7 @@ const WishListPage = () => {
                     <ProductList
                         key={index}
                         isWishList={true}
-                        {...data.product}
+                        productItem={data.product}
                     />
                 ) }
             </div>

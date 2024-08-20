@@ -23,7 +23,7 @@ const Home = () => {
             </Head>
 
             <div className='flex w-full flex-wrap items-center justify-between gap-y-16 gap-x-7'>
-                { mockProductsData.map(data => <ProductList key={data.productId} {...data}/>) }
+                { mockProductsData.map(data => <ProductList productItem={data} />) }
             </div>
         </>
     )

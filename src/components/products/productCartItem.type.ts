@@ -1,9 +1,11 @@
+import { StaticImageData } from 'next/image'
+
 interface Colors {
-    productId: number,
-    code: string,
-    name: string,
-    photo: string,
-    startingPrice: number
+    productId: number;
+    code: string;
+    name: string;
+    photo: StaticImageData | string;
+    startingPrice: number;
 }
 
 interface Size {
@@ -11,18 +13,18 @@ interface Size {
 }
 
 export interface Product {
-    productId: number | string,
-    name: string,
-    description: string,
-    rating: number,
-    startingPrice: number,
-    count: number,
-    disCount: number,
-    photo: string,
-    productStatus?: string,
-    photosX60?: string,
-    colors: Colors[],
-    size: Size[]
+    productId: number;
+    name: string;
+    description?: string;
+    rating: number;
+    startingPrice: number;
+    count: number;
+    disCount: number;
+    photo: StaticImageData | string;
+    productStatus?: string;
+    photosX60?: (StaticImageData | string)[];
+    colors?: Colors[];
+    size?: Size[];
 }
 
 export interface CartProduct {
