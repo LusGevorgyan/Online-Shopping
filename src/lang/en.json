@@ -1,0 +1,78 @@
+{
+  "website.name": "Online shopping",
+  "header.lang.name": "English",
+  "header.title": "Summer Sale For All products And Free Express Delivery - OFF 50%!",
+  "header.shopNow.title": "ShopNow",
+  "header.search.placeholder": "What are you looking for?",
+  "header.navbar.home.title": "Home",
+  "header.navbar.contact.title": "Contact",
+  "header.navbar.about.title": "About",
+  "header.navbar.sign-in.title": "Sign In",
+
+  "footer.search.placeholder": "Enter your email",
+  "footer.reserved.title": "All right reserved",
+  "footer.subscribe.title": "Subscribe",
+  "footer.subscribe.info": "Get 10% off your first order\n",
+  "footer.support.title": "Support",
+  "footer.account.title": "Account",
+  "footer.my.account.title" : "My Account",
+  "footer.login.title": "Login",
+  "footer.cart.title": "Cart",
+  "footer.wishlist.title": "Wishlist",
+  "footer.shop.title": "Shop",
+
+  "footer.quick.link.title": "Quick Link",
+  "footer.PP.title": "Privacy Policy",
+  "footer.TS.title": "Terms Of Use",
+  "footer.FAQ.title": "FAQ",
+  "footer.contact.title": "Contact",
+
+  "footer.download.app.title": "Download App",
+  "footer.download.app.description": "Save $3 with App New User Only",
+
+  "404.not.found.title": "Not Found",
+  "404.not.found.description": "Your visited page not found. You may go home page.",
+  "404.not.found.button.title": "Back to Home page",
+
+  "wishlist.title": "WishList",
+
+  "cart.button.add.title": "Add to cart",
+  "cart.button.added.title": "Added to cart",
+
+  "cart.product.title": "Products",
+  "cart.price.title": "Price",
+  "cart.quantity.title": "Quantity",
+  "cart.cart-total.title": "Total cart",
+  "cart.total.title": "Total",
+  "cart.free.title": "free",
+  "cart.subtotal.title": "Subtotal",
+  "cart.shipping.title": "Shipping",
+
+  "cart.return.button.title": "Return To Shop",
+  "cart.update.button.title": "Update Cart",
+  "cart.process.checkout.button.title": "Process to checkout",
+  "cart.coupon.button.title": "Apply Coupon",
+  "cart.coupon.placeholder.title": "Coupon code",
+  "cart.empty.title":  "Your cart is empty",
+  "cart.empty.description":  "Looks like you have not added anything to you cart. Go ahead & explore top products",
+
+  "contact.call.title": "Call To Us",
+  "contact.write.title": "Write To Us",
+  "contact.phone.title": "Phone",
+  "contact.emails.title": "Emails",
+  "contact.available.title": "We are available 24/7, 7 days a week.",
+  "contact.contact.title": "Fill out our form and we will contact you within 24 hours.",
+  "contact.form.name.placeholder": "Your Name",
+  "contact.form.email.placeholder": "Your Email",
+  "contact.form.phone.placeholder": "Your Phone",
+  "contact.form.notes.placeholder": "Your Message",
+  "contact.form.button": "Send message",
+
+  "error.email": "Please, enter a valid e-mail address",
+  "error.password": "Please, enter a minimum 8 characters password contains a combination of uppercase and lowercase",
+  "error.phoneNumber.min": "Please, enter a valid phone number, minimum 8 digits.",
+  "error.phoneNumber.max": "Please, enter a valid phone number, maximum 12 digits.",
+
+  "toast.success.add.wishlist.message": "Your product has been added to the wishlist",
+  "toast.success.add.cart.message": "Your product has been added to the cart"
+}
